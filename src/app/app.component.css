@@ -1,0 +1,32 @@
+*{
+    margin: auto;
+    
+    }
+
+form{
+    height: 400px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+.mb-3{
+       
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    text-align:justify;
+    
+}
+
+button {
+    background-color:#008CBA; 
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+ 
