@@ -1,30 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { UserService } from '../services/app.service';
-import { User } from './app.model';
+import { TitleComponent } from './pages/index/title/title.component';
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
+  imports: [CommonModule, RouterOutlet, TitleComponent],
+  template: `<app-title></app-title>`
+
+  ,
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'api-front';
-  dados: any;
-  
-  constructor(private userService: UserService){}
-  
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
-  getAll(){
-    this.userService.getAll().subscribe((data: UserService) => {
-      this.dados = data;
-      
-  })
-}
 }
